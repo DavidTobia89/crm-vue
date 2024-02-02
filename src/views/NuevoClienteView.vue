@@ -1,11 +1,70 @@
 <script setup>
+import { FormKit } from '@formkit/vue'
+import RouterLink from '../components/UI/RouterLink.vue'
+import Header from '../components/UI/Heading.vue'
 
+defineProps({
+    titulo:{
+        type:String
+    }
+})
 </script>
 
 <template>
 <div>
-    <h1 class="text-4xl font-extrabold text-slate-500">Agregar Cliente</h1>
+    <div>
+       <div class="flex justify-end">
+            <RouterLink to = "inicio"> 
+                Volver
+            </RouterLink>
+        </div>
+    </div>
+    <Header>{{ titulo }}</Header>
+    <div class="mx-auto mt-10 bg-white shadow">
+        <div class="mx-auto md:w-2/3 py-20 px-6"> 
+            <FormKit
+            type="form"
+            >
+                <FormKit
+                    type="text"
+                    label="Nombre"
+                    placeholder="Nombre del Cliente"
+                    validation="required"
+                    :validation-messages="{required: 'El nombre del Cliente es Obligatorio'}"
+                    validation-visibility="blur"
+                />
+                <FormKit
+                    type="text"
+                    label="Apellido"
+                    placeholder="Apellido del Cliente"
+                    validation="required"
+                    :validation-messages="{required: 'El apellido del Cliente es Obligatorio'}"
+                    validation-visibility="blur"
+                />
+                <FormKit
+                    type="email"
+                    label="Email"
+                    placeholder="Email del Cliente"
+                    validation="required|email"
+                    :validation-messages="{required: 'El Email es Obligatorio', email:'Introduce un email correcto'}"
+                    validation-visibility="blur"
+                />
+                <FormKit
+                    type="text"
+                    label="Telefono"
+                    placeholder="Telefono: XXX-XXX-XXXX"
+                    validation="*matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}/"
+                    :validation-messages="{matches: 'El formato no es valido'}"
+                    validation-visibility="blur"
+                />
+            </FormKit>
+        </div>
+    </div>
 </div>
 </template>
-
+<style>
+    .formkit-wrapper{
+        max-width: 100%;
+    }
+</style>
 
