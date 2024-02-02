@@ -1,8 +1,18 @@
 {
-    "clientes": [
-        {
-            "nombre":"David",
-            "id" : 1
-        }
-    ]
+  "clientes": [
+    {
+      "id": "62b8",
+      "nombre": "DAVID",
+      "apellido": "DEL BUSTO",
+      "email": "davidtobiadelbusto@gmail.com",
+      "telefono": "687-254-7800"
+    },
+    {
+      "id": "a132",
+      "nombre": "DAVID",
+      "apellido": "DEL BUSTO",
+      "email": "davidtobiadelbusto@gmail.com",
+      "telefono": "687-254-7801"
+    }
+  ]
 }
