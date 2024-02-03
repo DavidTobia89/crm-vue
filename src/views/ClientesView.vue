@@ -20,6 +20,13 @@ defineProps({
 const existenClientes = computed(()=>{
     return clientes.value.length>0
 })
+const actualizarEstado= (({id, estado})=>{
+ClientesService.cambiarEstado(id, {estado:!estado})
+.then(()=>{
+const i =clientes.value.findIndex(cliente=>cliente.id===id)
+clientes.value[i].estado=!estado
+})
+})
 </script>
 
 <template>
@@ -47,6 +54,7 @@ const existenClientes = computed(()=>{
                             v-for="cliente in clientes"
                             :key="cliente.id"
                             :cliente="cliente"
+                            @actualizar-estado="actualizarEstado"
                         ></Clientes>
                   </tbody>
               </table>

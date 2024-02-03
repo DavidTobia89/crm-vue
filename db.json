@@ -1,17 +1,17 @@
 {
   "clientes": [
     {
-      "id": "ca0c",
-      "nombre": "DAVID",
+      "nombre": "Juan",
       "apellido": "DEL BUSTO",
       "email": "davidtobiadelbusto@gmail.com",
       "telefono": "687-254-0780",
       "empresa": "cas",
-      "estado": 2
+      "id": "ca0c",
+      "estado": false
     },
     {
       "id": "d677",
-      "nombre": "DAVID",
+      "nombre": "Monica",
       "apellido": "DEL BUSTO",
       "email": "davidtobiadelbusto@gmail.com",
       "telefono": "687-254-0780",
