@@ -1,25 +1,22 @@
 <script setup>
 import ClientesService from '../services/ClienteService'
 import { FormKit } from '@formkit/vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import RouterLink from '../components/UI/RouterLink.vue'
 import Header from '../components/UI/Heading.vue'
 
 const router = useRouter()
+const route = useRoute()
+
+const {id} = route.params
 defineProps({
     titulo:{
         type:String
     }
 })
 
-
-
 const handleSubmit = (data) => {
-    data.estado=1
-    ClientesService.agregarCliente(data)
-    .then((respuesta)=>{
-        router.push({name: 'listado-clientes'}) 
-    })
+   
     
 }
 </script>

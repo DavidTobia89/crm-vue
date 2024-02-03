@@ -1,25 +1,21 @@
 {
   "clientes": [
     {
-      "id": "68a4",
+      "id": "ca0c",
       "nombre": "DAVID",
       "apellido": "DEL BUSTO",
       "email": "davidtobiadelbusto@gmail.com",
-      "telefono": "687-254-0780"
+      "telefono": "687-254-0780",
+      "empresa": "cas",
+      "estado": 2
     },
     {
-      "id": "6734",
+      "id": "d677",
       "nombre": "DAVID",
       "apellido": "DEL BUSTO",
       "email": "davidtobiadelbusto@gmail.com",
-      "telefono": "687-254-0780"
-    },
-    {
-      "id": "a73a",
-      "nombre": "DAVID",
-      "apellido": "DEL BUSTO",
-      "email": "davidtobiadelbusto@gmail.com",
-      "telefono": "687-254-0780"
+      "telefono": "687-254-0780",
+      "estado": 1
     }
   ]
 }
