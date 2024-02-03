@@ -27,6 +27,13 @@ const i =clientes.value.findIndex(cliente=>cliente.id===id)
 clientes.value[i].estado=!estado
 })
 })
+const eliminarCliente = ((id) => {
+    ClientesService.eliminarCliente(id)
+    .then(()=>{
+        clientes.value =clientes.value.fillter(cliente=>cliente.id!==id)
+
+})
+})
 </script>
 
 <template>
@@ -55,6 +62,7 @@ clientes.value[i].estado=!estado
                             :key="cliente.id"
                             :cliente="cliente"
                             @actualizar-estado="actualizarEstado"
+                            @eliminar-cliente="eliminarCliente"
                         ></Clientes>
                   </tbody>
               </table>
